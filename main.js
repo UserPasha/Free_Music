@@ -30,9 +30,6 @@ const form = document.forms["form"]
 const formArr = Array.from(form)
 const button = form.elements["button"]
 
-// button.addEventListener("click", () => {
-//     alert("hi!")
-// })
 
 const serializeForm=(formNode)=>{
     return new FormData(form)
