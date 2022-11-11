@@ -1,87 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <div class="left-side">
-          <div class="address details">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="topic">Адрес</div>
-            <div class="text-one">г. Москва</div>
-            <div class="text-two">Пресненская наб., 8 стр. 1</div>
-          </div>
-          <div class="phone details">
-            <i class="fas fa-phone-alt"></i>
-            <div class="topic">Телефон</div>
-            <div class="text-one">8-800-000-00-00</div>
-            <div class="text-two">8-900-000-00-00</div>
-          </div>
-          <div class="email details">
-            <i class="fas fa-envelope"></i>
-            <div class="topic">Email</div>
-            <div class="text-one">support@site.com</div>
-            <div class="text-two">admin@site.com</div>
-          </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <title>Music</title>
+</head>
+
+<body>
+    <section class="header" id="header">
+        <header class="header__top">
+            <div class="logo__description">
+                <img class="logo" src="./images/music_logo.png" alt="logo" />
+                <h3>Поддержка независимых певцов/музыкантов и songwriters</h3>
+            </div>
+
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <!-- <li class="navigation__list__item"><a>home</a></li>
+                    <li class="navigation__list__item"><a>albums</a></li>
+                    <li class="navigation__list__item"><a>live</a></li>
+                    <li class="navigation__list__item"><a>about</a></li>
+                    <li class="navigation__list__item"><a>gallery</a></li>
+                    <li class="navigation__list__item"><a>contacts</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <div class="header__wrapper">
+            <div class="header__content">
+                <div class="header__content__button" id="previous">
+                    <img src="./images/left.svg" alt="arrow left" class="left" />
+                </div>
+                <div class="header__content__container">
+                    <h2 class="header__content__title">
+                        Поможем монетизировать Ваши песни и стать Известными
+                    </h2>
+                    <div class="stripe"></div>
+                    <h3 class="header__content__description">
+                        Увеличим прибыль независимого артиста за счет личных консультаций
+                        С разработкой пошагового плана пути к деньгам.
+                    </h3>
+                </div>
+                <div class="header__content__button" id="next">
+                    <img src="./images/right.svg" alt="arrow right" />
+                </div>
+            </div>
+            <div class="header__info__wrapper">
+                <div class="header__info">
+                    Вам будет полезно, если:
+                </div>
+                <div class="header__info__description">
+                    <div class="header__info__description__item">
+                        <img src="./images/icons/money.svg" alt="money" />
+                        Пишите музыку, и она не приносит необходимы доход?
+                    </div>
+                    <div class="header__info__description__item">
+                        <img src="./images/icons/like.svg" alt="likes" />
+                        Хотите, чтобы ваши песни услышали миллионы?
+                    </div>
+                    <div class="header__info__description__item">
+                        <img src="./images/icons/start.svg" alt="star" />
+                        Хотели бы стать известной(ым), но не знаете как?
+                    </div>
+                    <div class="header__info__description__item">
+                        <img src="./images/icons/group.svg" alt="group" />
+                        Где найти клиентов / группу и монетизировать творчество?
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="right-side">
-          <div class="topic-text">Отправьте нам сообщение</div>
-          <p>
-            Если у вас есть какие-то вопросы или предложения по сотрудничеству -
-            заполните форму ниже
-          </p>
-          <form action="send_mail.php" name="form" method="POST">
+
+
+    </section>
+    <section class="content">
+        <div class="content__wrapper">
+            <div class="content__image">
+                <img src="./images/secondBlock/photoCut.png" />
+            </div>
+
+            <div class="content__text">
+                <span>Здравствуйте</span> Меня зовут Игнаткин Игорь. Моя профессия это менеджер артистов. А так же я
+                делаю разборы
+                музыкантов и через правильно заданные вопросы помогаю прийти к цели. Все ответы есть внутри нас, а
+                советы
+                попросту не работают. Пока мысль не принадлежит самому человеку, делать он ничего не будет. Сама
+                методика
+                известная, принадлежит ученому Щедровицкому. Называется ОДИ. Благодаря ей, Роскосмос запустил ракету в
+                космос за 40 дней. Монетизировать Ваши песни даже попроще будет! &#128578
+                Я знаю общую проблему музыкантов, это деньги с творчества. И я помог уже 30-ти+ музыкантам решить эту
+                проблему.
+                И у меня нет желания продавать вам услуги, и доказывать эффективность метода. Вместо этого предложу
+                пройти
+                пробную 30-ти минутную консультацию. За это я не возьму с вас денег &#128578 А вдруг, этот тот знак
+                вселенной,
+                который ты ждал(а)? &#128578
+                Просто нажми на кнопочку ниже и оставь свои контакты. Я с вами свяжусь!
+
+            </div>
+        </div>
+        <div class="content__text__button" id="buttonForm">
+            Запишитесь на ознакомительную сессию
+        </div>
+        <div class="content__player__wrapper">
+            <img src="./images/secondBlock/vinylM.png" alt="vinyl" />
+            <img src="./images/secondBlock/player-key.png" alt="player key" />
+        </div>
+
+
+    </section>
+    <section class="form" id="formSection">
+
+        <form action="send_mail.php" name="form" method="POST" class="popform">
             <div class="input-box">
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                name="name"
-                id="name"
-                data-reg="^[А-ЯЁ][а-яё]*$"
-              />
-              <label for="name">Только русские буквы</label>
+                <input type="text" placeholder="Ваше имя" name="name" id="name" />
+                <label for="name">Введите Ваше имя</label>
             </div>
             <div class="input-box">
-              <input
-                type="text"
-                placeholder="Введите email"
-                name="email"
-                id="email"
-                data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
-              />
-              <label for="email">В формате: your-name@email.com</label>
+                <input type="text" placeholder="Введите email (по желанию)" name="email" id="email" />
+                <label for="email">Ваш email</label>
             </div>
             <div class="input-box">
-              <input
-                type="text"
-                placeholder="Введите телефон"
-                name="phone"
-                id="phone"
-                data-reg="^((\+7|7|8)+([0-9]){10})$"
-              />
-              <label for="phone">В формате: 88000000000 или 78000000000</label>
+                <input type="text" placeholder="Ваш номер телефона" name="phone" id="phone" />
+                <label for="email">Введите номер телефона</label>
             </div>
             <div class="input-box message-box">
-              <textarea placeholder="Сообщение" name="message"></textarea>
+                <textarea placeholder="Введите ваше сообщение" name="message"></textarea>
             </div>
             <div class="button">
-              <input type="submit" id="button" value="Отправить" />
+                <input type="submit" id="button" value="Отправить" />
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <script
-      src="https://kit.fontawesome.com/fce9a50d02.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
-  </body>
+        </form>
+    </section>
+    <script src="main.js"></script>
+</body>
+
 </html>
