@@ -1,50 +1,43 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
 
-// require "PHPMailer-master/src/PHPMailer.php";
-// require "PHPMailer-master/src/Exception.php";
-// require 'PHPMailer-master/src/SMTP.php';
+    require "PHPMailer-master/src/Exception.php";
+    require "PHPMailer-master/src/PHPMailer.php";
 
-require __DIR__."/PHPMailer-master/src/Exception.php";
-require __DIR__."/PHPMailer-master/src/PHPMailer.php";
+    $mail = new PHPMailer(true);
+	
+    $mail->CharSet = "UTF-8";
+    $mail->IsHTML(true);
 
-$mail = new PHPMailer(true);
-$mail->CharSet = "UTF-8";
-$mail->isHTML(true)
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+	$phone = $_POST["phone"];
+    $message = $_POST["message"];
+	$email_template = "template_mail.html";
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$phone = $_POST["phone"];
-$message = $_POST["message"];
+    $body = file_get_contents($email_template);
+	$body = str_replace('%name%', $name, $body);
+	$body = str_replace('%email%', $email, $body);
+	$body = str_replace('%phone%', $phone, $body);
+	$body = str_replace('%message%', $message, $body);
 
-$email_template = "template_mail.html";
+    $mail->addAddress("itdevreact@gmail.com");   
+	$mail->setFrom($email);
+    $mail->Subject = "[Заявка с формы]";
+    $mail->MsgHTML($body);
 
-$body = file_get_contents($email_template);
+    if (!$mail->send()) {
+        $message = "Ошибка отправки";
+    } else {
+        $message = "Данные отправлены!";
+    }
+	
+	$response = ["message" => $message];
 
-$body = str_replace('%name%', $name, $body);
-$body = str_replace('%email%', $email, $body);
-$body = str_replace('%phone%', $phone, $body);
-$body = str_replace('%message%', $message, $body);
+    header('Content-type: application/json');
+    echo json_encode($response);
 
 
-$theme = "[Заявка с формы]";
-
-$mail->addAddress('itdevreact@gmail.com');
-$mail->Subject = $theme;
-$mail->MsgHTML($body);
-
-if(!$mail->send(){
-    $message = "Сообщение не отправлено"
-} else{
-    $message = "Сообщение отправлено"
-});
-
-$response = ["message"=> $message];
-header('Content-type: application/json')
-
-echo json_encode($response);
 ?>
-
-
