@@ -15,10 +15,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Roboto+Condensed&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
         rel="stylesheet">
-    <title>Music</title>
+    <link rel="icon" type="image/x-icon" href="./images/icons/logo-black2.png">
+    <title>Soldout</title>
 </head>
 
 <body>
+
     <section class="header" id="header">
         <header class="header__top">
             <div class="logo__description">
@@ -28,19 +30,14 @@
 
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <!-- <li class="navigation__list__item"><a>home</a></li>
-                    <li class="navigation__list__item"><a>albums</a></li>
-                    <li class="navigation__list__item"><a>live</a></li>
-                    <li class="navigation__list__item"><a>about</a></li>
-                    <li class="navigation__list__item"><a>gallery</a></li>
-                    <li class="navigation__list__item"><a>contacts</a></li> -->
+                
                 </ul>
             </nav>
         </header>
         <div class="header__wrapper">
             <div class="header__content">
                 <div class="header__content__button" id="previous">
-                    <img src="./images/left.svg" alt="arrow left" class="left" />
+                    <img src="./images/icons/arrow.svg" alt="arrow left" class="left" />
                 </div>
                 <div class="header__content__container">
                     <h2 class="header__content__title">
@@ -53,7 +50,7 @@
                     </h3>
                 </div>
                 <div class="header__content__button" id="next">
-                    <img src="./images/right.svg" alt="arrow right" />
+                    <img src="./images/icons/arrow.svg" alt="arrow right" class="right" />
                 </div>
             </div>
             <div class="header__info__wrapper">
@@ -97,9 +94,11 @@
                 советы
                 попросту не работают. Пока мысль не принадлежит самому человеку, делать он ничего не будет. Сама
                 методика
-                известная, принадлежит ученому Щедровицкому. Называется ОДИ. Благодаря ей, Роскосмос запустил ракету в
+                известная, принадлежит ученому Щедровицкому. Называется ОДИ. Благодаря ей, Роскосмос запустил ракету
+                в
                 космос за 40 дней. Монетизировать Ваши песни даже попроще будет! &#128578
-                Я знаю общую проблему музыкантов, это деньги с творчества. И я помог уже 30-ти+ музыкантам решить эту
+                Я знаю общую проблему музыкантов, это деньги с творчества. И я помог уже 30-ти+ музыкантам решить
+                эту
                 проблему.
                 И у меня нет желания продавать вам услуги, и доказывать эффективность метода. Вместо этого предложу
                 пройти
@@ -113,36 +112,69 @@
         <div class="content__text__button" id="buttonForm">
             Запишитесь на ознакомительную сессию
         </div>
-        <div class="content__player__wrapper">
-            <img src="./images/secondBlock/vinylM.png" alt="vinyl" />
-            <img src="./images/secondBlock/player-key.png" alt="player key" />
+        <div class="content__player__block">
+            
+            <div class="content__player__wrapper">
+                <img src="./images/secondBlock/vinylNew.svg" alt="vinyl" />
+                <img src="./images/secondBlock/player-key.png" alt="player key" />
+            </div>
+            <div class="review__title">
+                Отзывы
+            </div>
+            <div class="content__review__wrapper">
+               
+                <div class="review__item first__item">
+                    <img src="./images/review/6e9b16eb54.jpg"/>
+                <div class="review__item">
+                    <img src="./images/review/9dcb303450.jpg"/>
+                </div>
+                <div class="review__item last__item">
+                    <img src="./images/review/7b7e4f3398.jpg"/>
+                </div>
+            </div>
         </div>
+      
 
 
+        <section class="form" id="formSection">
+
+            <form action="send_mail.php" name="form" method="POST">
+                <div class="close" id="closeIcon">
+                    <img src="./images/icons/close.svg" alt="close form" />
+                </div>
+                <h3 class="form__title">Запись на ознакомительную сессию</h3>
+                <div class="input-box">
+                    <input type="text" placeholder="Ваше имя" name="name" id="name" data-reg="^[А-ЯЁ][а-яё]*$" />
+                    <label for="name">Только русские буквы</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Введите email" name="email" id="email"
+                        data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" />
+                    <label for="email">В формате: your-name@email.com</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="Введите телефон" name="phone" id="phone"
+                        data-reg="^((\+7|7|8)+([0-9]){10})$" />
+                    <label for="phone">В формате: 88000000000 или 78000000000</label>
+                </div>
+                <div class="input-box message-box">
+                    <textarea placeholder="Сообщение" name="message"></textarea>
+                </div>
+                <div class="button">
+                    <input type="submit" id="button" value="Отправить" />
+                </div>
+            </form>
+            </div>
+            </div>
+            </div>
+        </section>
+        
     </section>
-    <section class="form" id="formSection">
 
-        <form action="send_mail.php" name="form" method="POST" class="popform">
-            <div class="input-box">
-                <input type="text" placeholder="Ваше имя" name="name" id="name" />
-                <label for="name">Введите Ваше имя</label>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Введите email (по желанию)" name="email" id="email" />
-                <label for="email">Ваш email</label>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Ваш номер телефона" name="phone" id="phone" />
-                <label for="email">Введите номер телефона</label>
-            </div>
-            <div class="input-box message-box">
-                <textarea placeholder="Введите ваше сообщение" name="message"></textarea>
-            </div>
-            <div class="button">
-                <input type="submit" id="button" value="Отправить" />
-            </div>
-        </form>
-    </section>
+    <footer class="footer">
+        &copy; Soldout 2022
+    </footer>
+
     <script src="main.js"></script>
 </body>
 

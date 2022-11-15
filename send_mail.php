@@ -31,7 +31,7 @@ $body = str_replace('%message%', $message, $body);
 
 $theme = "[Заявка с формы]";
 
-$mail->addAddress('itdevreact@gmail.com');
+$mail->addAddress('email');
 $mail->Subject = $theme;
 $mail->MsgHTML($body);
 
